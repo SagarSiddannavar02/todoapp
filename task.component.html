@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="test-succcess">spring+angular crud</h1>
+     <form (ngSubmit)="createTask()">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text"class="form-comtrol"[(ngModel)]="newTask.description">
+
+            </div>
+            <div class="col-2">
+                <button class="btn-btn-success">submit</button>
+
+            </div>
+        
+                <div class="row-5">
+                    <div class="col-6">
+                        <div *ngIf="!(tasks.length>0);else tasklist"></div>
+                            <h3>no data</h3>
+                    </div>
+                    <ng-templete #tasklist>
+                        <ul class="list group" *ngfor=""></ul>
+                    </ng-templete>
+                </div>
+            
+
+
+         </div>
+    </form>
+</div>
